@@ -1,0 +1,27 @@
+<div class="col-sm-9">
+	<div class="panel panel-info">
+	    <div class="panel-heading">
+			<h3>Available items </h3>
+       </div>
+		<div class="panel-body">
+	   		<div class="list-group">
+	      		<a href="#" class="list-group-item" ng-repeat="itm in itemsData">
+					<h4 class="list-group-item-heading">
+	      				<i class="glyphicon glyphicon-asterisk"></i> 
+	     							 {{ itm.name }}
+	       			</h4>
+	    			<div class="row">
+	    				<div class="col-xs-11">
+	      					<p class="list-group-item-text" ng-if="itm.description">{{ itm.description }} 
+	    					</p>
+	    				</div>
+	    				<div class="col-xs-1">
+	    					<button class="btn btn-default btn-xs" ng-click="deleteItem($index)">
+	    						<span class="glyphicon glyphicon-trash">Delete</span></button>
+	    				</div>
+	    			</div>
+	  			</a>
+			</div>
+		</div>
+	</div>
+</div>

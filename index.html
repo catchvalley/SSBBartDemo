@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Items Dashboard	</title>
+
+		<!-- CSS -->
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- load angular js, ui-router, and our custom js controller file -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"> </script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"> </script>
+	     <script src="js/items.json"> </script>
+	    <script src="js/itemsController.js"> </script>  
+	    <script src="js/itemParser.js"> </script> 
+
+
+	</head>
+
+ <!-- angular app autobootstraps here -->
+  <body ng-app="itemsApp">
+  	<nav class="navbar navbar-inverse">
+	  		<div class="container-fluid">
+	    	<div class="navbar-header">
+	     	 <a class="navbar-brand" href="#">Home</a>
+	    	</div>
+	    	<ul class="nav navbar-nav">
+		      <li><a ui-sref="viewAll" >View </a></li>
+		      
+		      <li><a ui-sref="create">Create</a></li>
+
+		      <li><a ui-sref="viewList">listView</a></li>
+		      
+		      
+	    	</ul>
+	  		</div>
+		</nav>
+   
+    <!-- angular controller called here-->
+    <div ng-controller="itemsCtrl">
+
+      <!-- Main Content  -->
+      <div class="container-fluid">
+
+        <!-- Items dashboard is an application that has been tested on Firefox . It uses AngularJs 1.4.8, Angular UI Router.js 1.0.3 and Bootstrap CSS 3.3.7 along with some customized .js files
+        -->
+        <!-- navigation bar -->
+		
+        <!-- Viwes will be injected here -->
+        <div ui-view>    </div>
+
+      </div>
+    </div> 
+
+</body>
+</html>

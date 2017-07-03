@@ -1,0 +1,25 @@
+<!--viewAll.html dispalys a view of all the items  -->
+
+<!-- Main panel holding the content-->
+<div class="panel panel-info">
+  <div class="panel-heading">
+     Available Items List     
+  </div>
+  
+  <div class="panel-body">
+  
+   <!-- dispalys the data as a list-->
+  <ul>
+    <li ng-repeat="item in listViewItems" ng-include="'itemTree'"></li>
+  </ul> 
+
+  </div>
+  </div>
+
+<script type="text/ng-template" id="itemTree">
+    {{ item.name }}
+    <ul ng-if="item.childItems">
+        <li ng-repeat="item in item.childItems" ng-include="'itemTree'">           
+        </li>
+    </ul>
+</script>
